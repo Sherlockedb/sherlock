@@ -5,7 +5,6 @@ author: Sherlockedb
 date: 2020-11-20 22:43:06 +0800
 categories: [Program, Nginx]
 tags: [nginx, c]
-pin: true
 media_subpath: '/posts/20201120'
 lang: zh-CN
 ---
