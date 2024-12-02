@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/srv/jekyll # 当前目录挂载到容器
     ports:
-      - "8080:4000" # 映射 Jekyll 默认端口
-      - "35730:35729" # 映射 Jekyll 默认端口
+      - "8080:8080" # 映射 Jekyll 默认端口
+      - "8081:8081" # 映射 Jekyll 默认端口
     command: >
-      sh -c "rm -rf _site && bundle install && bundle exec jekyll serve --host 0.0.0.0 -P 4000 -I -w -l"
+      sh -c "rm -rf _site && bundle install && bundle exec jekyll serve --host 0.0.0.0 -P 8080 -I -w -l --livereload_port 8081"
