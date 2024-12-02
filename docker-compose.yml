@@ -1,7 +1,7 @@
 services:
-  jekyll:
-    image: gh-pages-env-test
-    container_name: jekyll-container-test
+  blog_chirpy:
+    image: blog-chirpy-env
+    container_name: blog_chirpy_env
     restart: always
     volumes:
       - .:/srv/jekyll # 当前目录挂载到容器
