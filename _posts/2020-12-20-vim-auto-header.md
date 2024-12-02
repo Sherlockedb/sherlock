@@ -46,7 +46,7 @@ autocmd bufnewfile *.py call HeaderPython()
 ```
 效果：
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/20201220230335.png)
+![](https://blogs.dns.army/imgbed/blog/20201220230335.png)
 
 --- 
 
@@ -74,7 +74,7 @@ autocmd bufnewfile *.sh call HeaderShell()
 
 效果：
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/20201220230408.png)
+![](https://blogs.dns.army/imgbed/blog/20201220230408.png)
 
 --- 
 
@@ -100,7 +100,7 @@ autocmd bufnewfile *.md call HeaderMarkDown()
 ```
 效果：
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/20201220230446.png)
+![](https://blogs.dns.army/imgbed/blog/20201220230446.png)
 
 --- 
 
@@ -133,9 +133,9 @@ autocmd BufNewFile *.c,*.cc,*.cpp,*.h, exec ":call HeaderCPP()"
 
 效果：
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/20201220230943.png)
+![](https://blogs.dns.army/imgbed/blog/20201220230943.png)
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/20201220231009.png)
+![](https://blogs.dns.army/imgbed/blog/20201220231009.png)
 
 ---
 

@@ -37,11 +37,11 @@ auto/configure --prefix=$HOME/local/nginx
 &emsp;&emsp;`auto/configure`这个脚本是检查一些环境变量，然后生成宏变量，如果跑这个脚本过程报错的话，在`auto`里面搜索对应的关键字，一般可以找到原因。比如有些系统没装`pcre`库，就可以下载`pcre`的源码，然后指定`pcre`源码路径，再重新`configure`一下就可以了。
 跑完这个脚本，我们来看看生成了什么东西，先`git status`一下
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/cee9c6b9c1a30ff7b820f924e0aecc59.png)
+![](https://blogs.dns.army/imgbed/blog/cee9c6b9c1a30ff7b820f924e0aecc59.png)
 
 &emsp;&emsp;生成了`Makefile`和一个`objs`文件夹，仔细看这个`Makefile`就知道，其实最终是调`objs`里面的`Makefile`，我们继续看一下`objs(tree objs)`里面的内容
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/f5c1e4d418ed0e717fce1fc0e8e34122.png)
+![](https://blogs.dns.army/imgbed/blog/f5c1e4d418ed0e717fce1fc0e8e34122.png)
 
 &emsp;&emsp;我们主要看里面两个头文件和一个源文件，两个头文件是生成的一些宏定义，`nginx`源码里面用到很多宏，到时可以回到这里看，`ngx_modules.c`则是所有模块的数组，这个我们后面再说，`objs/src`里面只是一些空文件，目录结构跟源码目录`src`结构一样，是为了放编译过程生成的目标文件。现在我们来编译一下。
 ```shell
@@ -50,13 +50,13 @@ make install
 ```
 &emsp;&emsp;编译安装完就会看到`bin`下面有二进制和配置文件等
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/5fb7e19c1d41c8056200002c.png)
+![](https://blogs.dns.army/imgbed/blog/5fb7e19c1d41c8056200002c.png)
 
 ---
 ## 跑起来
 &emsp;&emsp;我们先改一下配置文件，主要改三个地方，日志级别、监听端口和单进程模式，如图:
 
-![](https://raw.githubusercontent.com/Sherlockedb/github.page/gh-pages/blog/5fb7e57e1d41c80562000032.png)
+![](https://blogs.dns.army/imgbed/blog/5fb7e57e1d41c80562000032.png)
 
 ```shell
 # nginx默认的配置文件是conf/nginx.conf,可以用-c指定配置文件路径
