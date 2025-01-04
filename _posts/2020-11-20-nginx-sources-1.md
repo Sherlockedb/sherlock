@@ -21,6 +21,8 @@ lang: zh-CN
 &emsp;&emsp;从[GitHub nginx](https://github.com/nginx/nginx)获取源码
 ```shell
 git clone https://github.com/nginx/nginx.git
+# 进入源码目录
+cd nginx
 # checkout到当前最新稳定版
 git checkout -b stable-1.18 origin/branches/stable-1.18
 ```
