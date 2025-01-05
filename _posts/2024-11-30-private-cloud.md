@@ -1,10 +1,10 @@
 ---
-title: 私有云服务器搭建（零）架构：服务和拓扑图
+title: 私有云搭建（零）架构：服务和拓扑图
 description:
 author: Sherlockedb
 date: 2024-11-30 10:31:00 +0800
-categories: [raspberry pi4, cloud]
-tags: [raspberry pi4, cloud]
+categories: [raspberry pi4, 私有云搭建]
+tags: [raspberry pi4, 私有云搭建]
 lang: zh
 ---
 
@@ -45,6 +45,8 @@ lang: zh
 + 原始数据
 + 热备份：定时自动备份到另外一个硬盘
 + 冷备份： 电脑开机手动备份到电脑的硬盘
+
+备份的数据内容一般是部署服务的配置、服务对应的数据库等这些数据。
 
 &emsp;&emsp;为了搞热备份我还专门用个`usb-hub`连两个硬盘，注意要`usb-hub`要有额外供电的，为两个硬盘供电，直接插树莓派4的`usb`口会电压不足，没发提供稳定电流，导致系统会异常重启。
 
